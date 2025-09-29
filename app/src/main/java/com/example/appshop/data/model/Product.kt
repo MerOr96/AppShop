@@ -10,5 +10,5 @@ data class Product(
     val title: String,
     val description: String,
     val price: Double,
-    val imageUrl: String // можно использовать локальные drawable имена или URL
+    val imageUrl: String
 ) : Serializable

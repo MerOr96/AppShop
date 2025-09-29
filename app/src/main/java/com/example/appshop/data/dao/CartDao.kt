@@ -1,7 +1,13 @@
 package com.example.appshop.data.dao
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
 import com.example.appshop.data.model.CartItem
+
 @Dao
 interface CartDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

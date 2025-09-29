@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.appshop.R
+import com.example.appshop.data.model.CartItem
 import com.example.appshop.databinding.ItemCartBinding
 
 class CartAdapter(
@@ -12,10 +14,10 @@ class CartAdapter(
     private val onRemove: (CartItem) -> Unit
 ) : RecyclerView.Adapter<CartAdapter.VH>() {
 
-    inner class VH(val binding: ItemCartBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class VH(private val binding: ItemCartBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: CartItem) {
             binding.tvCartTitle.text = item.title
-            binding.tvCartPrice.text = "${item.price} ₽"
+            binding.tvCartPrice.text = binding.root.context.getString(R.string.product_price_format, item.price)
             binding.tvQuantity.text = item.quantity.toString()
             Glide.with(binding.imgCart.context).load(item.imageUrl).into(binding.imgCart)
 
@@ -38,8 +40,8 @@ class CartAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val b = ItemCartBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return VH(b)
+        val binding = ItemCartBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return VH(binding)
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
@@ -47,4 +49,10 @@ class CartAdapter(
     }
 
     override fun getItemCount(): Int = items.size
+
+    fun updateItems(newItems: List<CartItem>) {
+        items.clear()
+        items.addAll(newItems)
+        notifyDataSetChanged()
+    }
 }
