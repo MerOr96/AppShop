@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AppShop</string>
+    <string name="product_price_format">%1$.2f ₽</string>
+    <string name="cart_total_format">Total: %1$.2f ₽</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="added_to_cart">Added</string>
+    <string name="checkout">Checkout</string>
+    <string name="view_cart">Open cart</string>
+    <string name="cart_item_image_content_description">Cart item image</string>
+    <string name="cart_decrease_quantity">Decrease quantity</string>
+    <string name="cart_increase_quantity">Increase quantity</string>
+    <string name="cart_remove_item">Remove item</string>
 </resources>

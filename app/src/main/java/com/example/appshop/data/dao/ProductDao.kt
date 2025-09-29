@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.appshop.data.model.Product
+
 @Dao
 interface ProductDao {
     @Query("SELECT * FROM products")
