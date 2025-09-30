@@ -10,4 +10,17 @@
     <string name="cart_decrease_quantity">Decrease quantity</string>
     <string name="cart_increase_quantity">Increase quantity</string>
     <string name="cart_remove_item">Remove item</string>
+    <string name="cart_title">Cart</string>
+    <string name="item_details_title">Product details</string>
+    <string name="main_categories_title">Categories</string>
+    <string name="category_clothing">Clothing</string>
+    <string name="category_shoes">Shoes</string>
+    <string name="category_accessories">Accessories</string>
+    <string name="category_electronics">Electronics</string>
+    <string name="product_favorite">Add to favorites</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_catalog">Catalog</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_profile">Profile</string>
 </resources>

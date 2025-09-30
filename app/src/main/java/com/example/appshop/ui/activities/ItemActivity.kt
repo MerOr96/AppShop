@@ -25,6 +25,12 @@ class ItemActivity : AppCompatActivity() {
         setContentView(binding.root)
         repo = Repository(applicationContext)
 
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         product = extractProduct()
         product?.let { p ->
             binding.tvDetailTitle.text = p.title
