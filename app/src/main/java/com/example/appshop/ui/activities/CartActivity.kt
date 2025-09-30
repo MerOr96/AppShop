@@ -24,6 +24,12 @@ class CartActivity : AppCompatActivity() {
         setContentView(binding.root)
         repo = Repository(applicationContext)
 
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         adapter = CartAdapter(mutableListOf(),
             onQuantityChange = { item ->
                 lifecycleScope.launch {

@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Основные акцентные цвета -->
-    <color name="colorPrimary">#2196F3</color> <!-- синий -->
-    <color name="colorOnPrimary">#FFFFFF</color> <!-- текст/иконки поверх синего -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
 
-    <color name="colorSecondary">#FF9800</color> <!-- оранжевый акцент -->
+    <color name="colorSecondary">#FF9800</color>
     <color name="colorOnSecondary">#FFFFFF</color>
 
-    <!-- Фон и поверхности -->
-    <color name="colorBackground">#FFFFFF</color>
+    <!-- Поверхности -->
+    <color name="colorBackground">#F5F7FA</color>
     <color name="colorSurface">#FFFFFF</color>
-    <color name="colorOnBackground">#000000</color>
-    <color name="colorOnSurface">#000000</color>
+    <color name="colorOnBackground">#1C1B1F</color>
+    <color name="colorOnSurface">#1C1B1F</color>
+    <color name="colorOnSurfaceVariant">#5F6368</color>
+    <color name="colorOutline">#E0E3EB</color>
 
-    <!-- Дополнительно для текста/иконок -->
-    <color name="textPrimary">#212121</color>
+    <!-- Дополнительные оттенки -->
     <color name="textSecondary">#757575</color>
     <color name="iconInactive">#808080</color>
     <color name="iconActive">#2196F3</color>
+    <color name="colorPriceHighlight">#1E88E5</color>
+
+    <!-- Цвета категорий -->
+    <color name="category_clothing">#1E88E5</color>
+    <color name="category_shoes">#8E24AA</color>
+    <color name="category_accessories">#FB8C00</color>
+    <color name="category_electronics">#009688</color>
+
+    <color name="category_card_stroke">#E3E7EF</color>
 </resources>
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.appshop.R
 import com.example.appshop.data.model.Product
 import com.example.appshop.data.repository.Repository
 import com.example.appshop.databinding.ActivityMainBinding
@@ -26,6 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         repo = Repository(applicationContext)
 
+        setSupportActionBar(binding.toolbar)
+        binding.bottomNavigation.selectedItemId = R.id.menu_home
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_cart -> {
+                    startActivity(Intent(this, CartActivity::class.java))
+                    false
+                }
+                else -> true
+            }
+        }
+
         binding.recyclerProducts.layoutManager = LinearLayoutManager(this)
 
         binding.fabCart.setOnClickListener {
@@ -33,6 +46,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         loadProducts()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.bottomNavigation.selectedItemId = R.id.menu_home
     }
 
     private fun loadProducts() {

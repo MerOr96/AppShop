@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Базовая тема приложения -->
     <style name="Theme.AppShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Цвета -->
+        <!-- Цветовая палитра -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorSecondary">@color/colorSecondary</item>
@@ -10,31 +10,45 @@
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="colorSurface">@color/colorSurface</item>
         <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
+        <item name="colorOutline">@color/colorOutline</item>
 
-        <!-- Статус-бар -->
-        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <!-- Системные элементы -->
+        <item name="android:statusBarColor">@color/colorSurface</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
 
-        <!-- Toolbar -->
+        <!-- Компоненты -->
         <item name="toolbarStyle">@style/AppToolbarStyle</item>
-
-        <!-- BottomNavigation -->
         <item name="bottomNavigationStyle">@style/AppBottomNavStyle</item>
+        <item name="materialButtonStyle">@style/AppButtonStyle</item>
+        <item name="materialCardViewStyle">@style/Widget.AppShop.BaseCard</item>
+        <item name="floatingActionButtonStyle">@style/AppFabStyle</item>
     </style>
 
     <!-- Стиль для Toolbar -->
-    <style name="AppToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+    <style name="AppToolbarStyle" parent="Widget.Material3.Toolbar">
         <item name="android:background">@color/colorSurface</item>
-        <item name="titleTextColor">@color/textPrimary</item>
+        <item name="titleTextColor">@color/colorOnSurface</item>
         <item name="subtitleTextColor">@color/textSecondary</item>
+        <item name="navigationIconTint">@color/colorOnSurface</item>
         <item name="android:elevation">4dp</item>
     </style>
 
     <!-- Стиль для BottomNavigation -->
-    <style name="AppBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    <style name="AppBottomNavStyle" parent="Widget.Material3.BottomNavigationView">
         <item name="itemIconTint">@color/nav_item_colors</item>
         <item name="itemTextColor">@color/nav_item_colors</item>
         <item name="android:background">@color/colorSurface</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <style name="AppButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppFabStyle" parent="Widget.Material3.FloatingActionButton">
+        <item name="android:tint">@color/colorOnPrimary</item>
     </style>
 </resources>
 
