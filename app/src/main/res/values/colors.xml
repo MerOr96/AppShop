@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Основные акцентные цвета -->
+    <color name="colorPrimary">#2196F3</color> <!-- синий -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- текст/иконки поверх синего -->
+
+    <color name="colorSecondary">#FF9800</color> <!-- оранжевый акцент -->
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Фон и поверхности -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorOnSurface">#000000</color>
+
+    <!-- Дополнительно для текста/иконок -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="iconInactive">#808080</color>
+    <color name="iconActive">#2196F3</color>
 </resources>
+

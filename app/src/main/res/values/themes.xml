@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.AppShop" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Базовая тема приложения -->
+    <style name="Theme.AppShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Цвета -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <!-- Статус-бар -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Toolbar -->
+        <item name="toolbarStyle">@style/AppToolbarStyle</item>
+
+        <!-- BottomNavigation -->
+        <item name="bottomNavigationStyle">@style/AppBottomNavStyle</item>
+    </style>
+
+    <!-- Стиль для Toolbar -->
+    <style name="AppToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/colorSurface</item>
+        <item name="titleTextColor">@color/textPrimary</item>
+        <item name="subtitleTextColor">@color/textSecondary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Стиль для BottomNavigation -->
+    <style name="AppBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/nav_item_colors</item>
+        <item name="itemTextColor">@color/nav_item_colors</item>
+        <item name="android:background">@color/colorSurface</item>
+    </style>
 </resources>
+
